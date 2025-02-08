@@ -67,6 +67,7 @@ export default function ContactPage() {
       // Reset form
       setFormData({ name: "", email: "", solution: "", message: "" })
     } catch (error) {
+      console.error(error)
       // Show error message
       toast({
         title: "Error",

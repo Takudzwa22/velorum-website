@@ -82,10 +82,10 @@ export default function AboutPage() {
 
           {/* Call to action */}
           <div className="rounded-2xl bg-gradient-to-r from-blue-500/10 via-blue-500/5 to-transparent border border-blue-500/10 p-12 text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white mb-6">Let's Build Your AI-Powered Future</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-white mb-6">Let&apos;s Build Your AI-Powered Future</h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               We want to equip you with the AI strategies and resources that will transform your business into a lean,
-              intelligent, and unstoppable force. That's the Velorum AI promise: practical, forward-thinking solutions
+              intelligent, and unstoppable force. That&apos;s the Velorum AI promise: practical, forward-thinking solutions
               delivered by people who genuinely care about making your work easier.
             </p>
             <a
