@@ -63,7 +63,7 @@ export default function AboutPage() {
               <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
               <p className="text-gray-300">
                 Our mission is straightforward: create cutting-edge, accessible AI tools that help you work smarter, not
-                harder. Whether you're looking to automate repetitive tasks, gain deeper insights from your data, or
+                harder. Whether you&apos;re looking to automate repetitive tasks, gain deeper insights from your data, or
                 craft a future-ready strategy, Velorum AI is here to guide you through every step. We measure our
                 success by your success—if our technology doesn't make a noticeable impact on your bottom line, we won't
                 rest until it does.
