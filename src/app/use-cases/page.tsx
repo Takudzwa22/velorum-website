@@ -1,3 +1,5 @@
+"use client"
+import { useEffect } from 'react'
 import UseCasesContent from "@/components/ui/UseCasesContent"
 
 const cases = [
@@ -39,6 +41,9 @@ const cases = [
 ]
 
 export default function UseCasesPage() {
+  useEffect(() => {
+    // Put any browser API calls here
+  }, [])
   return <UseCasesContent cases={cases} />
 }
 
