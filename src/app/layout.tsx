@@ -1,3 +1,4 @@
+// This is a Server Component by default - no "use client" needed
 import './globals.css'
 import { Inter } from "next/font/google"
 import Header from "@/components/ui/header"
@@ -11,6 +12,12 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata = {
   title: "Velorum AI",
   description: "Innovative artificial intelligence solutions",
+  icons: {
+    icon: [
+      { url: "/favicon.svg" },
+      { url: "/favicon.ico" },  // Fallback for browsers that don't support SVG
+    ],
+  },
 }
 
 export default function RootLayout({
@@ -19,8 +26,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className} suppressHydrationWarning>
         <Header />
         <main>{children}</main>
         <Footer />

@@ -1,5 +1,9 @@
+"use client"
+
 import Link from "next/link"
 import { Bot, Globe, Users, Phone, Rocket, BarChartIcon as ChartBar } from "lucide-react"
+import { useEffect } from "react"
+import { useSearchParams } from "next/navigation"
 
 const services = [
   {
@@ -78,6 +82,22 @@ const services = [
 ]
 
 export default function ServicesPage() {
+  const searchParams = useSearchParams()
+
+  useEffect(() => {
+    // Get the hash from the URL
+    const hash = window.location.hash
+    if (hash) {
+      // Remove the # symbol
+      const id = hash.replace('#', '')
+      const element = document.getElementById(id)
+      if (element) {
+        // Smooth scroll to the element
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+  }, [searchParams])
+
   return (
     <div className="min-h-screen bg-black">
       {/* Hero section */}

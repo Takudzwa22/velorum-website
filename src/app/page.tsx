@@ -1,61 +1,61 @@
 import Image from "next/image"
 import Link from "next/link"
-import ClientCarousel from "@/components/ui/ClientCarousel"
+import CarouselWrapper from "@/components/ui/CarouselWrapper"
 
 const clients = [
   {
     name: "IVA Global School",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IVA_Global_Logo-removebg-preview-OvGAHQZFbJdlOasWzUK7g4C6K6PGCg.png",
+    logo: "/images/clients/iva-global.png",
     industry: "Education",
   },
   {
     name: "Borcelle",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Borcelle.PNG-BTF92l0lLW9gIXFEquslq1htANJkoL.png",
+    logo: "/images/clients/borcelle.png",
     industry: "Ed-Tech",
   },
   {
     name: "Elevate",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/elevate.PNG-WTq3BfL8QETmiDsnVJdLspDZIxPuka.png",
+    logo: "/images/clients/elevate.png",
     industry: "Coaching",
   },
   {
     name: "Direct",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Direct.PNG-sFxGxLAYkj9EnPISLTOOJCrYnT5cCV.png",
+    logo: "/images/clients/direct.png",
     industry: "Professional Services",
   },
   {
     name: "Hanover",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Hanover.PNG-JAUbnlpbG1MzV9ATSSklRfx219yhl1.png",
+    logo: "/images/clients/hanover.png",
     industry: "Online Education",
   },
   {
     name: "Bright",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bright.PNG-iWqeq0EkNQ5kgi0QgUIJKNQwyokHzs.png",
+    logo: "/images/clients/bright.png",
     industry: "Real Estate",
   },
   {
     name: "Grid",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Grid.PNG-1ZVuSeLv46hzTKXDmanPkuUnP8wjM0.png",
-    industry: "Construction",
+    logo: "/images/clients/grid.png",
+    industry: "Cosmetics",
   },
   {
     name: "Vanguard",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Vanguard.PNG-uJdG7lvBRW4gE2740ZXzXb5ysco5nI.png",
+    logo: "/images/clients/vanguard.png",
     industry: "Financial Services",
   },
   {
     name: "Worldly",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Worldy.PNG-HJsbx4tOKEMxCzWi6dDkpLPwnpp7G1.png",
+    logo: "/images/clients/worldly.png",
     industry: "Travel",
   },
   {
     name: "Ingoude Company",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Ingoude.PNG-DfJFP8Px0EVqtXXvUNKHvcLfCtFd5n.png",
+    logo: "/images/clients/ingoude.png",
     industry: "Resource Mangement",
   },
   {
     name: "Salford",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/salford.PNG-ji6sIDWub8AsDOU5VKS1mVUclTEnEU.png",
+    logo: "/images/clients/salford.png",
     industry: "Development",
   },
 ]
@@ -68,7 +68,7 @@ export default function Home() {
         {/* Background image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/xiaomi-pad-7-pro-3840x2160-19801.jpg-lKexw13fk7I2sdABKl3370MDsViK6i.jpeg"
+            src="/images/background.jpeg"
             alt="Abstract curves in blue and purple"
             fill
             className="object-cover"
@@ -94,7 +94,7 @@ export default function Home() {
                 href="https://calendly.com/taku-velorumai/ai-consultation"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-glassy rounded-md px-3.5 py-2.5 text-sm shadow-sm hover:shadow-lg"
+                className="btn-glassy px-6 py-3 rounded-lg text-sm font-medium shadow-sm hover:shadow-lg"
               >
                 Get started
               </a>
@@ -214,9 +214,12 @@ export default function Home() {
               We've had the privilege of working with some of the most innovative companies across various industries.
             </p>
           </div>
-          <ClientCarousel clients={clients} />
+          <CarouselWrapper clients={clients} />
           <div className="mt-10 flex justify-center">
-            <Link href="/use-cases" className="btn-glassy rounded-md px-3.5 py-2.5 text-sm shadow-sm hover:shadow-lg">
+            <Link 
+              href="/use-cases" 
+              className="btn-glassy px-6 py-3 rounded-lg text-sm font-medium shadow-sm hover:shadow-lg"
+            >
               View case studies
             </Link>
           </div>

@@ -9,11 +9,11 @@ interface Client {
   industry: string
 }
 
-interface ClientCarouselProps {
+interface CarouselWrapperProps {
   clients: Client[]
 }
 
-export default function ClientCarousel({ clients }: ClientCarouselProps) {
+export default function CarouselWrapper({ clients }: CarouselWrapperProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
@@ -55,5 +55,4 @@ export default function ClientCarousel({ clients }: ClientCarouselProps) {
       </div>
     </div>
   )
-}
-
+} 

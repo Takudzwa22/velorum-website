@@ -1,8 +1,23 @@
+"use client"
+
 import Link from "next/link"
 import { LinkedinIcon as LinkedIn, Instagram } from "lucide-react"
 import { NewsletterForm } from "./NewsletterForm"
+import { useRouter } from "next/navigation"
+
+const solutions = [
+  { name: "Custom AI Solutions", href: "/services" },
+  { name: "Leads & CRM Automation", href: "/services" },
+  { name: "AI Agents", href: "/services" },
+]
 
 export default function Footer() {
+  const router = useRouter()
+
+  const handleSolutionClick = (href: string) => {
+    router.push(href)
+  }
+
   return (
     <footer className="bg-black text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -34,21 +49,17 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase mb-4">Solutions</h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="#" className="text-gray-300 hover:text-blue-500 transition-colors">
-                  Custom AI Solutions
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-300 hover:text-blue-500 transition-colors">
-                  Leads & CRM Automation
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-300 hover:text-blue-500 transition-colors">
-                  AI Agents
-                </Link>
-              </li>
+              {solutions.map((solution) => (
+                <li key={solution.name}>
+                  <button
+                    onClick={() => handleSolutionClick(solution.href)}
+                    className="text-gray-300 hover:text-blue-500 transition-colors"
+                    suppressHydrationWarning
+                  >
+                    {solution.name}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
           <div>
