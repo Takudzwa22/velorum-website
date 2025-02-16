@@ -1,4 +1,5 @@
 // This is a Server Component by default - no "use client" needed
+import { Analytics } from "@vercel/analytics/react"
 import './globals.css'
 import { Inter } from "next/font/google"
 import Header from "@/components/ui/header"
@@ -14,8 +15,12 @@ export const metadata = {
   description: "Innovative artificial intelligence solutions",
   icons: {
     icon: [
-      { url: "/favicon.svg" },
-      { url: "/favicon.ico" },  // Fallback for browsers that don't support SVG
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico" },
+    ],
+    shortcut: ["/favicon.ico"],
+    apple: [
+      { url: "/favicon.ico" },
     ],
   },
 }
@@ -33,6 +38,7 @@ export default function RootLayout({
         <Footer />
         <NewsletterPopup />
         <Toaster />
+        <Analytics />
       </body>
     </html>
   )
