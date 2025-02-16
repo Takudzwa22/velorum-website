@@ -6,9 +6,9 @@ import { NewsletterForm } from "./NewsletterForm"
 import { useRouter } from "next/navigation"
 
 const solutions = [
-  { name: "Custom AI Solutions", href: "/services" },
+  { name: "AI Voice Agents", href: "/services" },
   { name: "Leads & CRM Automation", href: "/services" },
-  { name: "AI Agents", href: "/services" },
+  { name: "Custom AI Solutions", href: "/services" },
 ]
 
 export default function Footer() {

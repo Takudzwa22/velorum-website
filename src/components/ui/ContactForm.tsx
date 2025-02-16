@@ -10,15 +10,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useToast } from "@/components/ui/use-toast"
 
 const solutions = [
-  "Custom AI Solutions",
+  "AI Voice Agents",
   "Leads & CRM Automation",
-  "AI Agents",
-  "Marketing Automation",
-  "SEO Enhancement",
-  "Lead Generation",
-  "CRM Integration",
-  "Sales Call Enhancement",
-  "Onboarding Automation",
+  "Custom AI Solutions",
 ]
 
 export default function ContactForm() {
@@ -138,13 +132,28 @@ export default function ContactForm() {
                   <Label htmlFor="solution" className="text-white">
                     Interested Solution
                   </Label>
-                  <Select onValueChange={handleSelectChange} value={formData.solution} disabled={isSubmitting}>
-                    <SelectTrigger className="bg-gray-800/50 backdrop-blur-sm border-white/10 text-white">
+                  <Select 
+                    onValueChange={handleSelectChange} 
+                    value={formData.solution} 
+                    disabled={isSubmitting}
+                  >
+                    <SelectTrigger 
+                      className="bg-white/5 backdrop-blur-sm border-white/10 text-white hover:bg-white/10 
+                      transition-all duration-300 focus:ring-2 focus:ring-blue-500/50"
+                    >
                       <SelectValue placeholder="Select a solution" />
                     </SelectTrigger>
-                    <SelectContent className="bg-gray-800/80 backdrop-blur-sm border-white/10 text-white">
+                    <SelectContent 
+                      className="bg-black/80 backdrop-blur-xl border-white/10 text-white 
+                      shadow-lg shadow-black/50 animate-in fade-in-80 zoom-in-95"
+                    >
                       {solutions.map((solution) => (
-                        <SelectItem key={solution} value={solution} className="focus:bg-blue-500/20">
+                        <SelectItem 
+                          key={solution} 
+                          value={solution} 
+                          className="focus:bg-white/10 hover:bg-white/5 
+                          transition-colors duration-200 cursor-pointer data-[state=checked]:bg-blue-500/20"
+                        >
                           {solution}
                         </SelectItem>
                       ))}

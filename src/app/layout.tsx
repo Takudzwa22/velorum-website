@@ -7,22 +7,13 @@ import Footer from "@/components/ui/footer"
 import { NewsletterPopup } from "@/components/ui/NewsletterPopup"
 import { Toaster } from "@/components/ui/toaster"
 import type React from "react"
+import type { Metadata } from "next"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Velorum AI",
-  description: "Innovative artificial intelligence solutions",
-  icons: {
-    icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon.ico" },
-    ],
-    shortcut: ["/favicon.ico"],
-    apple: [
-      { url: "/favicon.ico" },
-    ],
-  },
+  description: "Innovative artificial intelligence solutions for the future.",
 }
 
 export default function RootLayout({
@@ -31,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark" suppressHydrationWarning>
       <body className={inter.className} suppressHydrationWarning>
         <Header />
         <main>{children}</main>
